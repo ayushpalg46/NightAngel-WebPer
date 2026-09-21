@@ -181,4 +181,86 @@ body:has(#theme-toggle:checked) .theme-icon { transform: rotate(180deg); }
 .journey-link { display: inline-block; margin-bottom: 35px; font-family: var(--playfair); font-weight: 600; font-size: 16px; color: var(--blue); }
 
 h2 { font-family: var(--doto); font-size: clamp(44px, 6vw, 78px); line-height: .95; font-weight: 500; letter-spacing: -.06em; margin-bottom: 65px; }
-h2 span { colo
+h2 span { color: var(--muted); }
+.about-text { max-width: 750px; font-size: 17px; color: var(--muted); margin-bottom: 20px; }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 60px; border-top: 1px solid var(--line); }
+.facts div { padding: 22px 20px 22px 0; border-bottom: 1px solid var(--line); }
+.facts span, .achievement-label, .journey-label { display: block; font-family: var(--mono); font-size: 9px; color: var(--muted); margin-bottom: 8px; }
+.facts strong { font-weight: 500; font-size: 15px; }
+
+.skills-list { border-top: 1px solid var(--line); }
+.skill { display: grid; grid-template-columns: 60px 1fr; padding: 45px 0; border-bottom: 1px solid var(--line); }
+.skill-number { font-family: var(--mono); font-size: 10px; color: var(--blue); }
+.skill-icon { font-family: var(--doto); font-size: 26px; margin-bottom: 15px; }
+.skill h3, .project h3, .journey-item h3, .achievement h3 { font-family: var(--doto); font-weight: 500; letter-spacing: -.03em; }
+.skill h3 { font-size: 29px; margin-bottom: 10px; }
+.skill p { max-width: 650px; color: var(--muted); }
+.tags, .project-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+.tags span, .project-tags span { border: 1px solid var(--line); padding: 6px 8px; font-family: var(--mono); font-size: 8px; color: var(--muted); }
+.toolkit { padding: 34px 0; }
+.toolkit > span { font-family: var(--playfair); font-weight: 700; font-size: 16px; color: var(--yellow); }
+.toolkit p { color: var(--white); font-family: var(--mono); font-size: 13px; line-height: 2; margin-top: 12px; }
+
+.project-list { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+.project { padding: 30px; min-height: 430px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.project:last-child { border-right: 0; }
+.project-top { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 8px; color: var(--muted); }
+.project-top span:first-child { color: var(--blue); }
+.project h3 { font-size: 34px; line-height: 1; margin: 70px 0 25px; }
+.project p { font-size: 13px; color: var(--muted); }
+
+.journey-list { border-top: 1px solid var(--line); }
+.journey-item { display: grid; grid-template-columns: 55px 100px 1fr; gap: 20px; padding: 32px 0; border-bottom: 1px solid var(--line); }
+.journey-number { font-family: var(--mono); color: var(--blue); font-size: 10px; }
+.journey-item h3 { font-size: 25px; margin-bottom: 8px; }
+.journey-item p { grid-column: 3; color: var(--muted); max-width: 600px; }
+
+.principle { width: min(1200px, calc(100% - 48px)); margin: auto; padding: 150px 0; border-bottom: 1px solid var(--line); }
+.principle-label { font-family: var(--playfair); font-weight: 700; font-size: 16px; color: var(--red); letter-spacing: .04em; }
+.principle h2 { margin: 35px 0 0; font-size: clamp(45px, 7vw, 92px); }
+
+.achievement-list { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+.achievement { padding: 32px 28px 35px 0; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); margin-right: 28px; }
+.achievement:last-child { border-right: 0; margin-right: 0; }
+.achievement-symbol { display: block; font-family: var(--doto); font-size: 25px; margin-bottom: 35px; }
+.achievement h3 { font-size: 25px; margin: 15px 0 10px; }
+.achievement p { color: var(--muted); font-size: 13px; }
+
+.github-section { width: min(1200px, calc(100% - 48px)); margin: auto; padding: 135px 0; display: grid; grid-template-columns: 180px 1fr; gap: 70px; border-bottom: 1px solid var(--line); }
+.github-section h2 { margin-bottom: 20px; }
+.github-section p { color: var(--muted); margin-bottom: 25px; }
+.github-link { font-family: var(--mono); font-size: 13px; color: var(--blue); }
+
+.contact-links { border-top: 1px solid var(--line); }
+.contact-links a { display: grid; grid-template-columns: 130px 1fr; padding: 23px 0; border-bottom: 1px solid var(--line); transition: padding-left .2s ease; }
+.contact-links a:hover { padding-left: 10px; }
+.contact-links span { font-family: var(--mono); font-size: 9px; color: var(--muted); }
+.contact-links strong { font-weight: 400; font-size: 16px; }
+
+footer { width: min(1200px, calc(100% - 48px)); min-height: 110px; margin: auto; display: flex; align-items: center; justify-content: space-between; font-family: var(--mono); font-size: 9px; color: var(--muted); }
+
+@media (max-width: 900px) {
+    .nav nav { display: none; }
+    .hero { grid-template-columns: 1fr; padding: 100px 0; min-height: auto; }
+    .terminal { margin-top: 50px; }
+    .section, .github-section { grid-template-columns: 1fr; gap: 35px; padding: 105px 0; }
+    .project-list, .achievement-list { grid-template-columns: 1fr; }
+    .project { border-right: 0; }
+    .achievement { margin-right: 0; border-right: 0; }
+}
+
+@media (max-width: 600px) {
+    .nav, .hero, .section, .github-section, .principle, footer { width: calc(100% - 30px); }
+    .nav-actions { gap: 10px; }
+    .status { display : none; }
+    .theme-text { display: none; }
+    .hero h1 { font-size: 65px; }
+    .terminal { padding-left: 20px; font-size: 12px; }
+    .terminal strong { font-size: 15px; }
+    .facts { grid-template-columns: 1fr; }
+    .journey-item { grid-template-columns: 45px 1fr; }
+    .journey-item h3, .journey-item p { grid-column: 2; }
+    .journey-label { grid-column: 2; grid-row: 1; }
+    .contact-links a { grid-template-columns: 1fr; gap: 7px; }
+    footer { flex-wrap: wrap; gap: 18px; padding: 28px 0; }
+}
