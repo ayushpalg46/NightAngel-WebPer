@@ -178,3 +178,7 @@ body:has(#theme-toggle:checked) .theme-icon { transform: rotate(180deg); }
     border-bottom: 1px solid var(--line);
 }
 .section-content { min-width: 0; }
+.journey-link { display: inline-block; margin-bottom: 35px; font-family: var(--playfair); font-weight: 600; font-size: 16px; color: var(--blue); }
+
+h2 { font-family: var(--doto); font-size: clamp(44px, 6vw, 78px); line-height: .95; font-weight: 500; letter-spacing: -.06em; margin-bottom: 65px; }
+h2 span { colo
